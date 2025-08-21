@@ -4,8 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container{
+            width: 1000px;
+            margin: 10px auto;
+        }
+        #header {
+            width: 100%; /* 현재 속한 영역의 100%를 차지하겠다는 뜻 */
+            height: 100px;
+            /* background-color: black; */
+            /* text-align: center; */
+            background-image: url(../media/forest.jpg);
+        }
+        #sidebar{
+            width: 25%;
+            height: 800px;
+            background-color: grey;
+            float: left;
+            padding: 15px;
+            box-sizing: border-box;
+            text-align: center;
+            
+        }
+        #introduce{
+            width: 75%;
+            height: 800px;
+            background-color: rgb(211, 211, 211);
+            float: left;
+            box-sizing: border-box;
+            padding: 25px;
+        }
+        .roundbox{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 1px solid grey;
+            background-image: url(../media/raccoon.jpg);
+            margin: 10px auto;            
+        }
+        .name{
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .hello{
+            font-size: 18px;
+            text-align: left;
+        }
+        .bold_big{
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .fontsmall{
+            font-weight: 300;
+            font-size: 20px;
+        }
+        table,tr,td,th{
+            border : 1px solid rgb(138, 138, 138);
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px 10px;
+            margin: 10px 0px;
+        }
+        th{
+            width: 150px;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        td{
+            text-align: left;
+            font-weight: 450;
+            font-size: 15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: aqua;
+        }
+    </style>
 </head>
 <body>
-    자기소개~
+    <div id="container">
+        <div id="header" style="background-size: cover;"></div>
+        <div id="sidebar">
+            <div class="roundbox" style="background-size: 200px;"></div>
+            <div class="name">박충현</div>
+            <div class="hello">
+                개발을 공부하고 있습니다.
+                <br>
+                <br>
+                010-1234-5678
+                <br>
+                <br>
+                asdf325@naver.com
+            </div>
+        </div>
+        <div id="introduce">
+            <div class="bold_big">
+                자기소개
+            </div>
+            풀스택 과정을 배우고 있습니다.
+            <div class="bold_big">
+                <a href="hobby.html">취미/관심사</a>
+            </div>
+            <div class="bold_big">
+                보유 기술
+                <div class="fontsmall">
+                    프론트
+                    <br>
+                        - html, css
+                    <br>
+                    <br>
+                    백
+                    <br>
+                        - java, oracle
+                </div>
+            </div>
+            <div class="bold_big">
+                학력
+                <table>
+                    <tr>
+                        <th>학교</th>
+                        <th>학과</th>
+                        <th>기간</th>
+                        <th>구분</th>
+                    </tr>
+                    <tr>
+                        <td>□□ 대학교</td>
+                        <td>△△ 학과</td>
+                        <td>20xx.xx~20xx.xx</td>
+                        <td>졸업</td>
+                    </tr>
+                    <tr>
+                        <td>○○고등학교</td>
+                        <td></td>
+                        <td>20xx.xx~20xx.xx</td>
+                        <td>졸업</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
