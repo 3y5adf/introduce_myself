@@ -94,9 +94,6 @@
         .daytime{
             margin-top: 300px;
         }
-        .dayNum{
-            font-size: 25px;
-        }
     </style>
 </head>
 <body>
@@ -115,6 +112,10 @@
                 <br>
                 <br>
                 asdf325@naver.com
+            </div>
+            <div class="daytime">
+                <div class="day"></div>
+                <div class="time"></div>
             </div>
         </div>
 
@@ -192,7 +193,7 @@
         let objDay = document.querySelector(".dayNum");
         let daynum = datetime.getDay();
         let daykor = ['일','월','화','수','목','금','토'];
-        let dayday = daykor[daynum]
+        let dayday = daykor[daynum];
 
         let day = 
             year + " . "
@@ -203,5 +204,6 @@
 
     }, 1000);
 </script>
+
 
 
