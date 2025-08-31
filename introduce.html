@@ -79,10 +79,23 @@
             font-size: 15px;
         }
         a{
+            color: black;
             text-decoration: none;
         }
         a:hover{
             color: aqua;
+        }
+        .time{
+            font-size: 30px;
+        }
+        .day{
+            font-size: 25px;
+        }
+        .daytime{
+            margin-top: 300px;
+        }
+        .dayNum{
+            font-size: 25px;
         }
     </style>
 </head>
@@ -104,6 +117,8 @@
                 asdf325@naver.com
             </div>
         </div>
+
+        
         <div id="introduce">
             <div class="bold_big">
                 자기소개
@@ -153,4 +168,40 @@
 </body>
 
 </html>
+
+<script>
+    setInterval(()=>{
+        let datetime = new Date();
+
+        let obj = document.querySelector(".time");
+
+        let hour = String(datetime.getHours()).padStart(2,0);
+        let minute = String(datetime.getMinutes()).padStart(2,0);
+        let second = String(datetime.getSeconds()).padStart(2,0);
+
+        let time = 
+            hour + " : " + minute + " : " + second; 
+        obj.innerHTML = time;
+
+        let obj2 = document.querySelector(".day");
+
+        let year = datetime.getFullYear();
+        let month = String(datetime.getMonth()+1).padStart(2,0);
+        let date = String(datetime.getDate()).padStart(2,0);
+
+        let objDay = document.querySelector(".dayNum");
+        let daynum = datetime.getDay();
+        let daykor = ['일','월','화','수','목','금','토'];
+        let dayday = daykor[daynum]
+
+        let day = 
+            year + " . "
+            + month + " . "
+            + date
+            + " (" + dayday + ")"; 
+        obj2.innerHTML = day;
+
+    }, 1000);
+</script>
+
 
