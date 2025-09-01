@@ -4,8 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container{
+            width: 1000px;
+            margin: 1px auto;
+        }
+        #head{
+            text-align: center;
+            background-color: aquamarine;
+        }
+        #mid{
+            height: 1000px;
+            background-color: beige;
+        }
+        #leftbar{
+            float: left;
+            border: 1px solid black;
+            width: 330px;
+            height: 850px;
+            margin-top: 10%;
+            margin: 20px;
+            box-sizing: border-box;
+            background-color: thistle;
+            position: fixed;
+        }
+        #rightbar{
+            float: left;
+            border: 1px solid rgb(153, 226, 255);
+            width: 100%;
+            height: 2000px;
+            box-sizing: border-box;
+            background-color: rgb(153, 226, 255);
+        }
+        
+        .box{
+            width: 100px;
+            margin : 50px;
+            margin-right: 70px;
+            padding: 40px 200px;
+            background-color: green;
+            color: white;
+            clear: both;
+            float: right;
+            
+        }
+        .box:hover .menu{
+            background-color: aquamarine;
+            display: block;
+        }
+        
+        .menu{
+            background-color: rgb(188, 255, 233);
+            width: 300px;
+            text-align: center;
+            /* display: none; */
+        }
+        .menu a{
+            display: block;
+            cursor: pointer; /* 마우스를 갖다대면, 커서가 손모양으로 바뀜 */
+            /* text-decoration: none; */
+        }
+        .menu a:hover{
+            display: block;
+        }
+        .outBtn{
+            float: right;
+            width: 80px;
+            height: 30px;
+        }
+    </style>
 </head>
 <body>
-    hobby
+    <div id="container">
+        <div id="head">
+        </div>
+        <div id="mid">
+            <div id="leftbar">
+                leftbar
+            </div>
+            <div id="rightbar">
+                rightbar
+                <span>
+                    <button class="outBtn" onclick="location.href='introduce.html'">
+                        main
+                    </button>
+                </span>
+                <div class="box">
+                    <div class="menu">
+                    </div>
+                </div>
+                <div class="box flex-down"></div>
+                <div class="box flex-down"></div>
+                <div class="box flex-down"></div>
+                <div class="box flex-down"></div>
+                <div class="box flex-down"></div>
+                <div class="box flex-down"></div>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
